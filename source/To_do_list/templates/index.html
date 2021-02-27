@@ -11,7 +11,7 @@
     <h1>Tasks</h1>
     {% for task in tasks %}
         <h2>{{ task.title }}</h2>
-        <p><a href="#">Подробнее...</a></p>
+        <p><a href="/task/?id={{ task.id }}">Подробнее...</a></p>
         <hr>
     {% endfor %}
 </body>
