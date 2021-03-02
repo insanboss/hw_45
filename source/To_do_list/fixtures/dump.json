@@ -1,0 +1,74 @@
+[
+{
+  "model": "To_do_list.task",
+  "pk": 1,
+  "fields": {
+    "title": "weeee",
+    "status": "new",
+    "date": null
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 2,
+  "fields": {
+    "title": "asj;dlkajsdlkas",
+    "status": "in_progress",
+    "date": "2021-02-09"
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 3,
+  "fields": {
+    "title": "Title_1",
+    "status": "new",
+    "date": "2021-02-27"
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 4,
+  "fields": {
+    "title": "Title_2",
+    "status": "done",
+    "date": "2021-02-03"
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 5,
+  "fields": {
+    "title": "title_3",
+    "status": "new",
+    "date": "2021-02-20"
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 6,
+  "fields": {
+    "title": "Title_2",
+    "status": "new",
+    "date": "2021-02-09"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$216000$KD749ZTUgEXn$+2p8xpDBkEY1ToQ0XiDwAa2KFpki6TNM9Pg5GqgE4Q8=",
+    "last_login": "2021-02-27T12:27:31.064Z",
+    "is_superuser": true,
+    "username": "Insan_andabekov",
+    "first_name": "",
+    "last_name": "",
+    "email": "insanboss@gmail.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2021-02-27T12:26:32.621Z",
+    "groups": [],
+    "user_permissions": []
+  }
+}
+]
