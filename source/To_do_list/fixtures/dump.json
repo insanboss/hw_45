@@ -5,7 +5,8 @@
   "fields": {
     "title": "weeee",
     "status": "new",
-    "date": null
+    "date": null,
+    "add_info": null
   }
 },
 {
@@ -14,7 +15,8 @@
   "fields": {
     "title": "asj;dlkajsdlkas",
     "status": "in_progress",
-    "date": "2021-02-09"
+    "date": "2021-02-09",
+    "add_info": null
   }
 },
 {
@@ -23,7 +25,8 @@
   "fields": {
     "title": "Title_1",
     "status": "new",
-    "date": "2021-02-27"
+    "date": "2021-02-27",
+    "add_info": null
   }
 },
 {
@@ -32,7 +35,8 @@
   "fields": {
     "title": "Title_2",
     "status": "done",
-    "date": "2021-02-03"
+    "date": "2021-02-03",
+    "add_info": null
   }
 },
 {
@@ -41,7 +45,8 @@
   "fields": {
     "title": "title_3",
     "status": "new",
-    "date": "2021-02-20"
+    "date": "2021-02-20",
+    "add_info": null
   }
 },
 {
@@ -50,7 +55,28 @@
   "fields": {
     "title": "Title_2",
     "status": "new",
-    "date": "2021-02-09"
+    "date": "2021-02-09",
+    "add_info": null
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 7,
+  "fields": {
+    "title": "Another_title",
+    "status": "new",
+    "date": "2021-03-02",
+    "add_info": ""
+  }
+},
+{
+  "model": "To_do_list.task",
+  "pk": 8,
+  "fields": {
+    "title": "JustAnotherTask",
+    "status": "new",
+    "date": "2021-03-01",
+    "add_info": "Was created  on 1st of march in 2021"
   }
 },
 {
