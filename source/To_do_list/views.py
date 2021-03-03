@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from To_do_list.models import Task,status_choices
+from django.shortcuts import render, redirect
+from To_do_list.models import Task, status_choices
+from django.http import Http404
+from django.urls import reverse
 # Create your views here.
 
 
@@ -11,14 +13,15 @@ def index_view(request):
     return render(request, 'index.html', context)
 
 
-def task_view(request):
-    task_id = request.GET.get('id')
-    task = Task.objects.get(pk=task_id)
-    context = {'task': task}
-    return render(request, 'task_view.html', context)
+def task_view(request, pk):
+    try:
+        task = Task.objects.get(pk=pk)
+    except Task.DoesNotExist:
+        raise Http404
+    return render(request, 'task_view.html', context={'task': task})
 
 
-def task_create_view(request):
+def task_create_view(request, *args, **kwargs):
     if request.method == 'GET':
         return render(request, 'task_create.html', context={'status': status_choices})
     elif request.method == 'POST':
@@ -29,4 +32,4 @@ def task_create_view(request):
         context = {
             'task': task
         }
-        return render(request, 'task_create.html', context)
+        return redirect('task_add', pk=task.id)
