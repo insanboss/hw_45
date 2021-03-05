@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Update task{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Create Task</h1>
+        <form method="post" action="{% url "task_update" %}">
+            {% csrf_token %}
+            <label>Title:</label><br/>
+            <input type="text" name="title" value="task.title"/><br/>
+            <label>Status:</label><br/>
+            <select name="status">
+                {% for key, label in status %}
+                <option value="{{ key }}">{{ label }}</option>
+                {% endfor %}
+            </select><br/>
+            <label>Date(YYYY-mm-dd):</label><br/>
+            <input type="text" name="date" value="task.date"/><br/>
+            <label>Add info:</label><br/>
+            <input type="text" name="add_info" value="task.add_info"/><br/>
+            <input type="submit" value="Send"/>
+        </form>
+    </div>
+{% endblock %}
+

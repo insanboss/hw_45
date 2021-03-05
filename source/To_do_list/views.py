@@ -28,3 +28,24 @@ def task_create_view(request):
         task = Task.objects.create(title=title, status=status, date=date)
 
         return redirect('task_view', pk=task.id)
+
+
+def task_update_view(request, pk):
+    task = get_object_or_404(Task, id=pk)
+    if request.method == 'GET':
+        return render(request, 'task_update.html', context={'task': task})
+    elif request.method == 'POST':
+        task.title = request.POST.get('title')
+        task.status = request.POST.get('status')
+        task.date = request.POST.get('date')
+        task.save()
+        return redirect('task_view', pk=task.id)
+
+
+
+def task_delete_view(request, pk):
+    task = get_object_or_404(Task, id=pk)
+    task.delete()
+    return redirect('index')
+
+
