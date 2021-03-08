@@ -19,7 +19,7 @@
     <h2>{{ task.title }}</h2>
     <p>{{ task.status }}</p>
     {% if task.date %}
-        <p>By: {{ task.date }}</p>
+        <p>By: {{ task.date | date:"Y:m:d" }}</p>
     {% else %}
         <p>Дата не указана</p>
     {% endif %}
